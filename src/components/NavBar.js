@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Link, Grid, Button} from "@material-ui/core";
+import { AppBar, Toolbar, Typography, Link, Grid} from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import NavModal from "./NavModal";
 
@@ -7,8 +7,8 @@ const useStyles = makeStyles({
     root: {
         flexGrow: 1,
     },
-    title: {
-        flexGrow: 1,
+    menuButton: {
+        marginRight: 2,
     },
 });
 
@@ -20,9 +20,9 @@ export default function NavBar () {
             <AppBar position="static">
                 <Toolbar>
                     <Grid container spacing={3}>
-                        <Grid item xs={7}>
-                            <Typography variant="h5" className={classes.title}>
-                                <Link href="/" underline="none" color="inherit">Lotus Climbing</Link>
+                        <Grid item xs={3} sm={3} md={7}>
+                            <Typography variant="h5" className={classes.title}>    
+                                    <Link href="/" underline="none" color="inherit">Lotus Climbing</Link>
                             </Typography>     
                         </Grid>
                         {["Climbing", "Yoga", "Fitness", "Pricing", "About", "Waiver"].map((value) => (
