@@ -1,27 +1,15 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Link, Grid} from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
 import NavModal from "./NavModal";
 
-const useStyles = makeStyles({
-    root: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginRight: 2,
-    },
-});
-
 export default function NavBar () {
-    const classes = useStyles();
-   
     return (
-        <div className={classes.root}>
+        <div>
             <AppBar position="static">
                 <Toolbar>
                     <Grid container spacing={3}>
                         <Grid item xs={3} sm={3} md={7}>
-                            <Typography variant="h5" className={classes.title}>    
+                            <Typography variant="h5">    
                                     <Link href="/" underline="none" color="inherit">Lotus Climbing</Link>
                             </Typography>     
                         </Grid>
@@ -41,6 +29,5 @@ export default function NavBar () {
                 </Toolbar>
             </AppBar> 
         </div>
-        
     );
 };
