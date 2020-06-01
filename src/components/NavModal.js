@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Modal, TextField} from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
-const NavModal = ({navName, navColor, variant}) => {
+const NavModal = ({navName, navColor}) => {
     const useStyles = makeStyles({
         paper: {
             position: 'absolute',
