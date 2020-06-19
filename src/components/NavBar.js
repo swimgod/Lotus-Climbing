@@ -2,9 +2,6 @@ import React from "react";
 import { AppBar, Toolbar, Typography, Link, Grid, MenuItem, Menu, IconButton} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import MoreIcon from '@material-ui/icons/MoreVert';
-import NavModal from "./NavModal";
-
-
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -60,22 +57,6 @@ export default function NavBar () {
         </MenuItem>
     ))
   );
-    
-  const secondaryNav = (
-    ["Login", "Sign Up"].map((value) => (
-        <Grid key={value} item className={classes.sectionDesktop}>
-            <NavModal navColor="inherit" navName={value}/>
-        </Grid>
-    ))
-  );
-
-  const secondaryNavMobile = (
-  ["Login", "Sign Up"].map((value) => (
-      <MenuItem key={value}>
-          <NavModal navColor="inherit" navName={value}/>
-      </MenuItem>
-  ))
-  );
 
   const renderMobileMenu = (
     <Menu
@@ -88,7 +69,6 @@ export default function NavBar () {
       onClose={handleMobileMenuClose}
     >
       {mainNavMobile}
-      {secondaryNavMobile}
     </Menu>
   );
 
@@ -104,7 +84,6 @@ export default function NavBar () {
                         </Grid>
                         <div className={classes.grow} />
                         {mainNav}
-                        {secondaryNav}
                         <div className={classes.sectionMobile}>
                             <IconButton
                               aria-label="show more"

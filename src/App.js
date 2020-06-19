@@ -5,6 +5,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import NavBar from "./components/NavBar";
 import WaiverPage from "./pages/WaiverPage";
 import './App.css';
+import SignUp from './components/Waiver/SignUp';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <div id="page-body">
         <Switch>
           <Route path="/" component={HomePage} exact/>
-          <Route path="/Waiver" component={WaiverPage}/>
+          <Route path="/waiver" component={WaiverPage}/>
+          <Route path="/signup" component={SignUp}/>
           <Route component={NotFoundPage}/>
         </Switch>
       </div>

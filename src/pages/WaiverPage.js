@@ -23,7 +23,7 @@ const WaiverPage = () => {
                     <img src={logo} alt="Lotus Logo" className={classes.logo}/>
                 </Grid>
                 <Grid item>
-                    <Button variant="contained" className={classes.button} color="primary">New to Lotus Climbing?</Button>
+                    <Button variant="contained" href="/signup" className={classes.button} color="primary">New to Lotus Climbing?</Button>
                 </Grid>
                 <Grid item>
                     <Button variant="contained" className={classes.button} color="primary">Already have an account.</Button> 
